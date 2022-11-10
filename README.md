@@ -71,13 +71,18 @@ It is important to check the multicollinearity of the numeric variables as they 
 
 The dependent variable obesity rate has a right skewed distribution and its count data (number of days a person reported sick in the last 30 days) so Poisson models are the appropriate ones to use. Initially Poisson model was used and to overcome the overdispersion problem Quasi Poisson and Negative Binomial models were employed. It was apparent that the negative binomial model performed the best among the three models. 
 
-<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/models.png" alt="alt text" width="60%" height="60%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/models.png" alt="alt text" width="80%" height="80%">
+
 
 ## 5. Quality Checks
 
-As we have implemented Linear regression, we have primarily checked for four basic assumptions:
+As poisson regressions are prone over dispersion we conducted dispersion test for poisson model
 
-1.	The dependent and independent attributes have linear relation: In the residual vs Fitted, the passing of the red line along the horizon and no clear pattern of the points suggests that the model is linear. 
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/dispersion_test.png" alt="alt text" width="50%" height="50%">
+
+As the dispersion value is 4.81 there is evidence of overdispersion. <br>
+
+
 
 <img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/9.png" alt="alt text" width="65%" height="65%">
 
