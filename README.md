@@ -33,7 +33,7 @@ After data cleaning and feature engineering, the final dataset had 39 columns an
 
 After data cleaning and feature engineering we have the following variables and the predictor table of the variables is below
 
-<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/predictor_table.png" alt="predictor table" width="100%" height="80%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/predictor_table.png" alt="predictor table" width="90%" height="80%">
 
 ## 3. Exploratory Data Analysis
 
