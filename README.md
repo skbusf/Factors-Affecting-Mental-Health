@@ -71,47 +71,47 @@ It is important to check the multicollinearity of the numeric variables as they 
 
 The dependent variable obesity rate has a right skewed distribution and its count data (number of days a person reported sick in the last 30 days) so Poisson models are the appropriate ones to use. Initially Poisson model was used and to overcome the overdispersion problem Quasi Poisson and Negative Binomial models were employed. It was apparent that the negative binomial model performed the best among the three models. 
 
-<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/models.png" alt="alt text" width="80%" height="80%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/models.png" alt="models" width="80%" height="80%">
 
 
 ## 5. Quality Checks
 
+**Dispersion test for poisson model:**
 As poisson regressions are prone over dispersion we conducted dispersion test for poisson model
 
-<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/dispersion_test.png" alt="alt text" width="50%" height="50%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/dispersion_test.png" alt="dispersion_test" width="50%" height="50%">
 
 As the dispersion value is 4.81 there is evidence of overdispersion. <br>
 
+**Durbin Watson test for negative binomial model:**
 
+DW test value for negative binomial model is 2.0032 indicates there is no auto correlation between the residuals.
 
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/9.png" alt="alt text" width="65%" height="65%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/dwtest.png" alt="dw_test" width="50%" height="50%">
 
-2.	Independence test: This assumption is not applicable to the data as each county’s data is independent to other counties. The Durbin-Watson test reveals that the model suffers from autocorrelation. 
+**VIF test for negative binomial model:**
 
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/10.png" alt="alt text" width="65%" height="65%">
+GVIF test values for negative binomial model are less than 5 indicating that Independence assumption is satisfied.
 
-3.	 Normality - This assumption states that the residuals should confine to normal distribution. From the QQ plot it is relevant that most of the residuals are normally distributed with exception of few extreme points.
-
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/11.png" alt="alt text" width="65%" height="65%">
-
-4.	Residuals have constant variance - In an ideal case, the residuals should have equal variance across all the points (Homoscedasticity). But, the Breusch-Pagan test shows that there is Heteroscedasticity in the residuals.
-
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/12.png" alt="alt text" width="65%" height="65%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/vif_output.png" alt="vif_test" width="50%" height="50%">
 
 ## 6. Insights
 
--	Recreational facilities promote healthy and active living and can help to reduce obesity. 1% increase will reduce obesity by 3.39%.
--	Full-service restaurants are a healthier alternative to fast food restaurants as they provide well-cooked nutritious, low-calorie healthy food.
--	The affordability of healthy food items has a great impact on controlling obesity. If the prices are 1% less expensive compared to unhealthy products like soda, obesity will reduce by 3.45%. 
--	Specialized food stores like retail bakeries, meat and seafood markets, dairy stores, and produce markets are popular and often visited by people. Obesity can be reduced by 1.35%, if the number of specialized stores per 1000 population increase by 1. 
--	Even though grocery stores and farmers markets sell healthy food items, they don’t help to reduce obesity. 
--	Though low accessibility to stores is a hurdle for having access to healthy food, it does not have any effect on obesity. 
--	If more people travel to work by public transportation, obesity can be controlled. 1% increase can reduce obesity by 0.12%.
--	Education helps to create more awareness about the importance of healthy and active living and can help to reduce obesity. A 1% increase in bachelor graduates, can reduce obesity by 0.19%.
+From the beta coefficients of negative binomial model, 
 
-## 7. Recommendations to County Officials to reduce obesity
+- Wyoming, Alabama, and West Virginia are the top 3 states and South Dakota, Illinois and Alaska are the least 3 states with bad mental health days.
+- Adults with good general health tend to be 11.4 % (~ 3.3 days) less mentally ill than adults with bad general health condition. 
+- Adults who are physically active i.e., exercise regularly reported 11.6% (~3.4 days) less bad mental health days. 
+- Cigarette smoking and e-cigarette smoking increase bad mental health days by 8.7% (~2.5 days) and 11.5 % (~ 3.3 days) respectively. 
+- Females are more mentally ill (9.8%) than men. Higher levels of education add 4.6 days additional mental illness days to an individual
 
--	Make healthy food products more affordable with the help of food assistance programs like SNAP(S) (Supplemental Nutrition Assistance Program). Increase of taxes on unhealthy products and subsidies for healthy ones can also help.
--	Open more recreational facilities for every 1000 population to promote active living.
--	Open more healthy food outlets like full-service restaurants and specialized stores (retail bakeries, meat and seafood markets, dairy stores, and produce markets) for every 1000 population.
--	Control the number of supermarkets and club stores per 1000 population. They make food products like soda, instant and processed food, more convenient and readily available. It increases obesity risk.
+## 7. Recommendations
+
+- The states of Wyoming, Alabama, and West Virginia should design better healthcare benefits like affordable insurance for their residents as the affordability to see a therapist has a greater impact on the reduction of mental illnesses
+- Create awareness of the benefits of exercise and maintaining good general health conditions
+- Adults should consider quitting smoking or binge drinking as it can improve their mental health
+- Colleges and high schools can establish and promote the campus health and wellness centers or set up counseling services 
+
+## 8. Stargazer Models Output
+
+https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/output.jpg
