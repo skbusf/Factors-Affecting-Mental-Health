@@ -114,4 +114,4 @@ From the beta coefficients of negative binomial model,
 
 ## 8. Stargazer Models Output
 
-https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/output.jpg
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/output.jpg" alt="model_output" width="70%" height="80%">
