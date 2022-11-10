@@ -69,48 +69,9 @@ It is important to check the multicollinearity of the numeric variables as they 
 
 ## 4. Statistical Models
 
-The dependent variable obesity rate has a normal distribution, so we implemented a multiple linear regression model to understand the effect of the various factors such as food environment, socio-economic, accessibility, health, and wellness activities on the obesity rate.
+The dependent variable obesity rate has a right skewed distribution and its count data (number of days a person reported sick in the last 30 days) so Poisson models are the appropriate ones to use. Initially Poisson model was used and to overcome the overdispersion problem Quasi Poisson and Negative Binomial models were employed. It was apparent that the negative binomial model performed the best among the three models. 
 
-Model 1 is the “main effects” model and initial model that explains the effect of individual independent variables on obesity. 
-
-Model 2 considers independent variables that a county administrator can control or take necessary actions to reduce the obesity rate in the county. 
-
-Model 3 contains interactions of the individual variables and explains the collective effect of those interacted variables on the obesity rate.
-
-Among the 3 models. Model 3 is our final model as the coefficients of the estimates are more closely aligned with the real world and the interaction terms provide more explanation on the obesity rate variation across counties. 
-
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/8.jpg" alt="alt text" width="65%" height="65%">
-
-#### Understanding Model 3
-
-**Low Accessibility:**
-- If the percentage of the population with low income and low access is increased by 1% then obesity will be increased by 0.003% which is almost 0% - no effect as the standard error is 0.008. 
--	With a 1% increase in population of people in the county with low income and low access to stores, the effect of the additional 1 unit of the grocery stores for 1000 population on obesity decreases by 0.016%.
-
-**Healthy food affordability:** 
--	With every 1% increase in the price of healthy food products (low-fat milk) relative to the unhealthy food products (soda), obesity will increase by 3.45%. With a very low value of standard error (0.49) the attribute is statistically significant.
-
-**Recreation and Fitness Centers:**
--	1 unit increase in the number of recreational centers per 1000 population, reduces obesity by 3.39%. Also, with just 0.6 of standard error, this attribute is statistically significant and has a large coefficient.
-
-**Restaurants:**
--	If the number of fast food restaurants per 1000 population increases by 1, obesity will increase by 0.12%. 
--	If the number of full-service restaurants per 1000 population increases by 1, obesity will reduce by 1.18% which specifies that full-service restaurants serve healthy food. With coefficient of -1.155 and St. Error (0.1), the attribute is statistically significant and highly relevant is vital in modeling
--	As fast-food restaurants per 1000 population increases by 1, 
-  -- the effect of the additional 1 unit of the specialized store for 1000 population on obesity increases by 1.9%
-  -- the effect of the additional 1 unit of the recreational facilities for 1000 population on obesity rate increases by 0.2%.
-
-**Stores:**
--	The number of grocery stores per 1000 population has a positive impact on the obesity rate. For an increase in each unit of grocery stores the obesity increases by 0.49% but has high 0.53 it is not a statistically significant attribute and can be ignored.
--	For an increase in each supercenter & club store for 1000 population, the obesity will increase by 9.7%. This effect can be because they offer great discounts on bulk packs of unhealthy food items (like chips and soda) in addition to offering healthy food items like fruits and vegetables. 
--	For an increase in each specialized store for 1000 population the obesity will be reduced by 1.35%.
--	Farmer’s market which sells fresh fruits and vegetables makes healthier food available to people.  We expect this field to reduce the obesity but the coefficient here represents that for an increase in every unit of farmer’s market per 1000 population increases the obesity rate by 2%.
-
-**Socio-demographic:**
--	An increase of 1% of the poverty rate of the county, increases obesity by 0.12%.
--	For every 1% increase in the percentage of the people who commute to work by walking will reduce the obesity of the county by 0.06%.
--	For an increase in every unit percentage of the population with a bachelor's degree or higher in the county, the obesity reduces by 0.19%
--	For a 1% increase in the county population that uses public transportation for commuting to work, obesity decreases by 0.12%.
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/models.png" alt="alt text" width="60%" height="60%">
 
 ## 5. Quality Checks
 
