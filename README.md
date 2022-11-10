@@ -112,6 +112,6 @@ From the beta coefficients of negative binomial model,
 - Adults should consider quitting smoking or binge drinking as it can improve their mental health
 - Colleges and high schools can establish and promote the campus health and wellness centers or set up counseling services 
 
-## 8. Stargazer Models Output
+## 8. Stargazer Output of Models
 
 <img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/output.jpg" alt="model_output" width="70%" height="80%">
