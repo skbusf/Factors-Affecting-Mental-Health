@@ -29,11 +29,11 @@ Performed data cleaning in python
 **After data cleaning and feature engineering, the final dataset had 39 columns and 57999 rows.**
 
 
-## 2. Variable Choice
+## 2. Predictor Table
 
-We started with initial assumptions and used data to validate these assumptions. The variables we have decided are the economic factors, food availability, stores, education, public services and recreation facilities:
+After data cleaning and feature engineering we have the following variables and the predictor table of the variables is below
 
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/1.jpg" alt="alt text" width="75%" height="75%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/predictor_table.png" alt="predictor table" width="75%" height="75%">
 
 ## 3. Exploratory Data Analysis
 
