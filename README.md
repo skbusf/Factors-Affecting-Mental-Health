@@ -26,40 +26,46 @@ Performed data cleaning in python
 - Dropped fields related to interview conditions like interview month, interview day, interview year
 - Derived state names from state fips code
 <br>
-**After data cleaning and feature engineering, the final dataset had 39 columns and 57999 rows.**
+After data cleaning and feature engineering, the final dataset had 39 columns and 57999 rows.
 
 
 ## 2. Predictor Table
 
 After data cleaning and feature engineering we have the following variables and the predictor table of the variables is below
 
-<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/predictor_table.png" alt="predictor table" width="75%" height="75%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/predictor_table.png" alt="predictor table" width="80%" height="80%">
 
 ## 3. Exploratory Data Analysis
 
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/2.png" alt="alt text" width="80%" height="80%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/histogram_bad_mental_health_days.png" alt="histogram of DV" width="50%" height="50%">
 
-Our dependent variable is obesity rate. We can observe from the map above that all states have more than 20% of adults with obesity. The South - East part of the US has more prevalence than the other regions. In at least 12 states, prevalence of obesity was greater than 32%. Colorado has the least obesity rate and Alabama has the highest. 
+Our dependent variable is bad_mental_health_days. We can observe that the histogram of bad mental health days is right skewed (poisson type) with some peaks at specific intervals. 
 
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/3.png" alt="alt text" width="50%" height="50%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/general_health_box_plot.png" alt="general_health box plot" width="50%" height="50%">
 
-The distribution of adult obesity rate is normal and has less spread. The obesity rate ranges from 13.10% to 47.9% with a mean of 30.57%. This suggests that on average, the prevalence of obesity in the United States is 30.57%. 1 out of 3 adults, were found to be obese in 2010.
+People with poor general health tend to experience more mental illness probably because poor general health condition usually refers to people suffering from any kind of disease or illness.
 
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/4.png" alt="alt text" width="50%" height="50%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/race_box_plot.png" alt="race box plot" width="50%" height="50%">
 
-From the correlation plot of all the attributes, we can observe that all the attributes are not highly correlated with a few exceptions. The obesity rate is negatively correlated with % of bachelors, natural amenity, recreation facilities per 100, and full-service restaurants per 100 suggesting that these attributes can help lower obesity. The obesity rate is positively correlated with poverty rate which is expected. 
+American Indians and other races have more mental illness days when comparing different races.
 
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/5.png" alt="alt text" width="50%" height="50%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/sex_box_plot.png" alt="sex box plot" width="50%" height="50%">
 
-A higher poverty rate signifies that more people will have lesser means to healthier food and lifestyle, in turn, increases the risk of obesity. From the scatterplot, we can observe the same relationship - obesity increases with poverty.
+Females suffer more from mental illness than males as they tend to have more hormonal imbalances.
 
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/6.png" alt="alt text" width="50%" height="50%">
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/exercise_box_plot.png" alt="exercise box plot" width="50%" height="50%">
 
-Education can increase awareness about the importance of high nutrition diets and the obesity epidemic and prevention. From the scatter plot, we can observe that an increase in the percentage of bachelors, reduces obesity.
+It is apparent that exercise improves physical and mental health hence people without exercise have a significant difference in average bad mental health days.
 
-<img src="https://github.com/netisheth/Food-Environment-Effect-On-Obesity/blob/master/pictures/7.png" alt="alt text" width="50%" height="50%">
 
-The scatter plot suggests that having more full-service restaurants does not increase obesity. This can be because they have a more balanced and healthier menu. To control obesity, we don’t have to stop eating out. We just have to find healthier alternatives. 
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/state_box_plot.png" alt="state box plot" width="75%" height="75%">
+
+Alabama, West Virginia, and Arkansas are the top 3 states with the highest average bad mental health days when compared to other states. 
+
+<img src="https://github.com/skbusf/Factors-Affecting-Mental-Health/blob/main/visualizations/correlation_plot.png" alt="correlation plot" width="75%" height="75%">
+
+It is important to check the multicollinearity of the numeric variables as they potentially skew the model outputs. We see that the highest correlation is between height and weight which is inherent. As any of the correlations is not near or beyond 0.7 there shouldn’t be any multicollinearity problem and skewed model outputs.
+
 
 ## 4. Statistical Models
 
